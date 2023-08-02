@@ -1,0 +1,31 @@
+﻿@model JobPortal.Models.JobTitle
+<h1>EDIT DETAILS</h1>
+
+
+<form method="post" action="EditJob" enctype="multipart/form-data" class="first">
+    <div class="Details">
+        <label asp-for="Id" class="form-label">@Html.DisplayNameFor(a=>a.Id) </label>
+        <input asp-for="Id" class="form-control" readonly />
+    </div>
+    <div class="Details">
+        <label asp-for="Name" class="form-label">@Html.DisplayNameFor(a=>a.Name) </label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="Details">
+        <label asp-for="Title" class="form-label">@Html.DisplayNameFor(a=>a.Title) </label>
+        <input asp-for="Title" class="form-control" />
+
+    </div>
+    <div class="Details">
+        <label asp-for="Location" class="form-label">@Html.DisplayNameFor(a=>a.Location) </label>
+        <input asp-for="Location" class="form-control" />
+    </div>
+    <div class="Details">
+        <label asp-for="Salary" class="form-label">@Html.DisplayNameFor(a=>a.Salary) </label>
+        <input asp-for="Salary" class="form-control" />
+    </div>
+
+    <br>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

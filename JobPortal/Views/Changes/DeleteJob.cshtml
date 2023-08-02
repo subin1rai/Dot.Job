@@ -1,0 +1,54 @@
+﻿@model JobPortal.Models.JobTitle
+
+<h1>DELETE</h1>
+
+<hr>
+<h2>Are you sure you want to Delete?</h2>
+<hr>
+<h3>Details of Car</h3>
+<dl class="row">
+    <dt class="col-sm-1">
+        Card id:
+    </dt>
+    <dd class=" col-sm-11">
+        @Html.DisplayFor(e=>e.Id)
+    </dd>
+
+    <dt class="col-sm-1">
+        Name:
+    </dt>
+    <dd class=" col-sm-11">
+        @Html.DisplayFor(e=>e.Name)
+    </dd>
+
+    <dt class="col-sm-1">
+        Brand:
+    </dt>
+    <dd class=" col-sm-11">
+        @Html.DisplayFor(e=>e.Location)
+    </dd>
+
+    <dt class="col-sm-1">
+        Price:
+    </dt>
+    <dd class=" col-sm-11">
+        @Html.DisplayFor(e=>e.Title)
+    </dd>
+    <dt class="col-sm-1">
+        Price:
+    </dt>
+    <dd class=" col-sm-11">
+        @Html.DisplayFor(e=>e.Salary)
+    </dd>
+</dl>
+
+<br>
+<form method="post" action="DeleteJob"  enctype="multipart/form-data" class="first">
+
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="Name" />
+    <input type="hidden" asp-for="Salary" />
+    <input type="hidden" asp-for="Location" />
+    <input type="hidden" asp-for="Title" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>

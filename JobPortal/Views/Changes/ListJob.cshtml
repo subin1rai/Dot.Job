@@ -1,0 +1,32 @@
+﻿@model List<JobPortal.Models.JobTitle>
+
+<h1>LIST OF JOB</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Job</th>
+            <th>Salary</th>
+            <th>Location</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var jobTitle in Model)
+        {
+            <tr>
+                <td>@jobTitle.Id</td>
+                <td>@jobTitle.Name</td>
+                <td>@jobTitle.Title</td>
+                <td>@jobTitle.Salary</td>
+                <td>@jobTitle.Location</td>
+                <td>
+                    <a href="/Changes/EditJob/@jobTitle.Id" class=" btn btn-primary">Edit</a>
+                    <a href="/Changes/DeleteJob/@jobTitle.Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
